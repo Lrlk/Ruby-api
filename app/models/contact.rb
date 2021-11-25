@@ -1,21 +1,21 @@
 class Contact < ApplicationRecord
    
-    belongs_to :kind
+    belongs_to :kind #, optional:true
    
-    def author
-        "Lucas Lopes"
-    end
+    # def author
+    #     "Lucas Lopes"
+    # end
 
-    def kind_description
+    # def kind_description
     
-        self.kind.description
+    #     self.kind.description
 
-    end
+    # end
 
-    def as_json(options={})
-    super(
-        root: true,
-        methods: [:author, :kind_description]
-        )
-    end
+    # def as_json(options={})
+    # super(
+    #     root: true,
+    #     methods: [:author, :kind_description]
+    #     )
+    # end
 end
