@@ -1,29 +1,42 @@
 class Contact < ApplicationRecord
    
-    belongs_to :kind #, optional:true
-   
-    # def author
-    #     "Lucas Lopes"
-    # end
+  belongs_to :kind #, optional:true
 
-    # def kind_description
-    
-    #     self.kind.description
+  # def birthdate_br
+  #   I18n.l(self.birthdate) unless self.birthdate.blank?
+  # end
 
-    # end
-
-    # def as_json(options={})
-    # super(
-    #     root: true,
-    #     methods: [:author, :kind_description]
-    #     )
-    # end
-
-    def hello
-    I18n.t('hello')
+  def to_br
+    {
+    name: self.name,
+    email: self.email,
+    birthdate: (I18n.l(self.birthdate) unless self.birthdate.blank?)
+    }
   end
 
-  def i18n
-    I18n.default_locale
-  end
+
+  # def author
+  #     "Lucas Lopes"
+  # end
+
+  # def kind_description
+
+  #     self.kind.description
+
+  # end
+
+  # def as_json(options={})
+  # super(
+  #     root: true,
+  #     methods: [:author, :kind_description]
+  #     )
+  # end
+
+  #   def hello
+  #   I18n.t('hello')
+  # end
+
+  # def i18n
+  #   I18n.default_locale
+  # end
 end
