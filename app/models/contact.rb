@@ -4,9 +4,9 @@ class Contact < ApplicationRecord
   belongs_to :kind #, optional:true
   has_many :phones
 
-  def as_json(options = {})
+  def as_json(options={})
     h = super(options)
-    h[:birthdate] = (i18n.l(self.birthdate)) unless slef.birthdate.blank?)
+    h[:birthdate] = (I18n.l(self.birthdate) unless self.birthdate.blank?)
     h
   end
 
