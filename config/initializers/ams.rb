@@ -1,1 +1,1 @@
-ActiveModel::Serializer.config.adapter = json_apis
+ActiveModel::Serializer.config.adapter = :json_api
