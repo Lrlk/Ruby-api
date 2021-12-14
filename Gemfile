@@ -11,7 +11,7 @@ gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
-
+# Manage Procfile-based applications
 gem 'foreman'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
